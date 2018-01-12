@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BuyerServiceService } from '../../buyer-service.service';
 
 @Component({
   selector: 'app-buyers',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./buyers.component.css']
 })
 export class BuyersComponent implements OnInit {
-
-  constructor() { }
+  buyers = [];
+  constructor(private buyerService: BuyerServiceService) {
+    this.buyers = this.buyerService.getBuyers();
+   
+  }
 
   ngOnInit() {
   }

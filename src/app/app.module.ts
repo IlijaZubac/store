@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BuyerServiceService} from './buyer-service.service';
 
 
 
@@ -25,13 +26,15 @@ const appRoutes: Routes = [
     BuyersComponent,
     ProductsComponent,
     NavbarComponent
+    
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
 
   ],
-  providers: [],
+  providers: [ BuyerServiceService],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
