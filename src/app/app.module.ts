@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BuyerServiceService} from './buyer-service.service';
+import { BuyerServiceService} from './components/services/buyer-service.service';
 
 
 

@@ -1,9 +1,25 @@
-<table>
- 	<th>Buyers</th>
-	<tr *ngFor="let buyer of buyerss">
-		<td > {{ firstName }} </td>
-		<td > {{ lastName }} </td>
-    <button (click)="remove(buyer)">Remove</button> 
-	</tr>
-</table><br><hr>
-<table>
+<table class="table">
+	<thead>
+	  <tr>
+		<th>Id</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Email</th>
+		<th>Remove</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr *ngFor="let buyer of buyers">
+		<td>{{buyer.id}}</td>
+		<td>{{buyer.firstName}}</td>
+		<td>{{buyer.lastName}}</td>
+		<td>{{buyer.email}}</td>
+	<!--	<td><a routerLink='/buyers/:id'>Check lastest purchase</a></td>-->
+		<td>
+		  <button (click)='removeBuyer(buyer)'>
+			Remove
+		  </button>
+		</td>
+	  </tr>
+	</tbody>
+  </table>

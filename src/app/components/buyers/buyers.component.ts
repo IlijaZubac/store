@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BuyerServiceService } from '../../buyer-service.service';
+import { BuyerServiceService } from '../services/buyer-service.service';
 
 @Component({
   selector: 'app-buyers',
@@ -12,6 +12,12 @@ export class BuyersComponent implements OnInit {
     this.buyers = this.buyerService.getBuyers();
    
   }
+  removeBuyer(buyer)
+  {
+    let index = this.buyers.indexOf(buyer);
+    this.buyers.splice(index,1);
+  }
+
 
   ngOnInit() {
   }
