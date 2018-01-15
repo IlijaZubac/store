@@ -22,4 +22,16 @@
 		</td>
 	  </tr>
 	</tbody>
-  </table>
+	</table>
+	
+	<form>
+		<label for="id">Id</label>
+		<input type="text" name = 'id' [(ngModel)]="newBuyer.id"><br>
+		<label for="">First Name</label>
+		<input type="text" name="firstName" [(ngModel)]="newBuyer.firstName"><br>
+		<label for="">Last Name</label>
+		<input type="text" name="lastName" [(ngModel)]="newBuyer.lastName"><br>
+		<label for="">Email</label>
+		<input type="text" name="dateOfBirth" [(ngModel)]="newBuyer.email"><br>
+		<button (click)="addBuyer()">Add Buyer</button>
+	</form>

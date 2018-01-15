@@ -42,5 +42,9 @@ export class BuyerServiceService{
       return this.buyers;
     }
     
+    public addBuyer(newBuyer)
+    {
+    this.buyers.push(newBuyer);
+    }
 
 }
